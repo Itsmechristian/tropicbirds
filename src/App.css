@@ -1,32 +1,80 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* 
+This style with transition every route
+*/
+.fade-enter {
+    opacity: 0;
+    z-index: 1;
   }
-  to {
-    transform: rotate(360deg);
-  }
+  
+.fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 250ms linear;
 }
+
+.title {
+    font-size: 3rem;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    font-family: 'SegoeUI-Light'
+}
+
+
+
+.home section {
+    height: 500px;
+}
+
+.home section .container {
+    padding: 5rem;
+    margin: 5rem auto;
+}
+
+.home section .container .left {
+    display: inline-block;
+    width: 50%;
+    padding: 0 1rem 0 0;
+    vertical-align: middle;
+}
+
+.home section .container .right {
+    display: inline-block;
+    width: 40%;
+    vertical-align: top;
+    padding: 0 1rem;
+    position: relative;
+}
+
+.home section .container .right img:first-child {
+    height: 220px;
+    width: auto;
+    position: absolute;
+    top: -50px;
+    z-index: 2;
+}
+
+.home section .container .right img:last-child {
+    height: 250px;
+    width: 375px;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+}
+
+@media (min-width: 576px) {
+ 
+}
+  
+  @media (min-width: 768px) {
+  
+  }
+  
+  @media (min-width: 992px) {
+
+  }
+  
+  @media (min-width: 1200px) {
+
+  }

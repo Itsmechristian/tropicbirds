@@ -1,14 +1,104 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Globals CSS */
+
+/* Fonts */
+@font-face {
+    font-family: 'SegoeUI-Light';
+    src:
+        url('./assets/fonts/segoe-ui-light/latest.woff2') format("woff2"),
+        url('./assets/fonts/segoe-ui-light/latest.woff') format("woff"),
+        url('./assets/fonts/segoe-ui-light/latest.ttf') format("truetype");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+@font-face {
+    font-family: 'SegoeUI-Semilight';
+    src:
+        url('./assets/fonts/segoe-ui-semilight/latest.woff2') format("woff2"),
+        url('./assets/fonts/segoe-ui-semilight/latest.woff') format("woff"),
+        url('./assets/fonts/segoe-ui-semilight/latest.ttf') format("truetype");
 }
+
+@font-face {
+    font-family: 'SegoeUI';
+    src:
+        url('./assets/fonts/segoe-ui/latest.woff2') format("woff2"),
+        url('./assets/fonts/segoe-ui/latest.woff') format("woff"),
+        url('./assets/fonts/segoe-ui/latest.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: 'SegoeUI-Semibold';
+    src:
+        url('./assets/fonts/segoe-ui-semibold/latest.woff2') format("woff2"),
+        url('./assets/fonts/segoe-ui-semibold/latest.woff') format("woff"),
+        url('./assets/fonts/segoe-ui-semibold/latest.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: 'SegoeUI-Bold';
+    src:
+        url('./assets/fonts/segoe-ui-bold/latest.woff2') format("woff2"),
+        url('./assets/fonts/segoe-ui-bold/latest.woff') format("woff"),
+        url('./assets/fonts/segoe-ui-bold/latest.ttf') format("truetype");
+}
+
+/* Commons */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'SegoeUI-Bold';
+    padding: 0;
+    margin: 0;
+    color: #292929;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    font-family: 'SegoeUI-SemiBold';
+    text-decoration: none;
+    color: #fff;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  @media (min-width: 576px) {
+    .container {
+      max-width: 540px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      max-width: 720px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .container {
+      max-width: 960px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1140px;
+    }
+  }

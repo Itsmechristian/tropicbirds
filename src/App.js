@@ -1,27 +1,46 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+// Components
+import Routes from './Routes';
+
 class App extends Component {
+    constructor() {
+      super();
+
+      this.handleLoader = this.handleLoader.bind(this)
+  }
+
+  state = {
+      load: false
+  }
+
+  componentDidMount() {
+      window.addEventListener('load', this.handleLoader)
+  }  
+
+  handleLoader() {
+      setTimeout(() => {
+          this.setState({ load: true })
+      }, 1000)
+  }
+  
+
   render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+    if(this.state.load) {
+      return (
+        <div className="App">
+          <Routes />
+        </div>
+      );
+    }
+    else {
+      return (
+        <div>
+          <h1>loading</h1>          
+        </div>
+      )
+    }
   }
 }
 
