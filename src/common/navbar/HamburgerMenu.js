@@ -13,14 +13,6 @@ class HamburgerMenu extends Component {
     this.handleOnClick = this.handleOnClick.bind(this);
   }
 
-  componentDidMount() {
-    // this.setState({
-    //     isClick: this.state.isClick ? false : true
-    //   });
-
-
-  }
-  
   handleOnClick() {
     this.setState({
         isClick: this.state.isClick ? false : true
@@ -39,6 +31,7 @@ class HamburgerMenu extends Component {
           <span />
           <span />
         </div>
+        <HamburgerItems isClick={this.props.isClick}/>
       </div>
     );
   }

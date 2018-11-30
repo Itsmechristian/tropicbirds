@@ -34,7 +34,8 @@ class Navbar extends Component {
      * width to know what design we should use in the current width.
      */
     this.setState({
-      windowWidth: window.innerWidth
+      windowWidth: window.innerWidth,
+      isClick: false
     });
   }
 
@@ -42,13 +43,12 @@ class Navbar extends Component {
     this.setState({
       isClick: isClick
     })
-    console.log(isClick)
   }
 
   render() {
     return (
       <nav>
-        <div className="container">
+        <div className="container" style={{backgroundColor: this.state.isClick ? '#000' : 'rgba(10, 9, 9, 0.459)', transition: 'all .2s'}}>
           <div className="left">
             <img
               src="https://res.cloudinary.com/sijey/image/upload/fl_lossy/v1543422414/tropicbirds/icons.png"
@@ -58,7 +58,7 @@ class Navbar extends Component {
             />
           </div>
           <div className="right">
-            {this.state.windowWidth < 576 ? <HamburgerMenu onClick={this.clickHandler} /> : <WebMenu />}
+            {this.state.windowWidth < 576 ? <HamburgerMenu onClick={this.clickHandler} isClick={this.state.isClick} /> : <WebMenu />}
           </div>
         </div>
       </nav>

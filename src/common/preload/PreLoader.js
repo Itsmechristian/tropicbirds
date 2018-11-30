@@ -27,6 +27,7 @@ class PreLoader extends Component {
   render() {
     return (
       <div
+        id={this.props.id}
         className={[this.props.className, "preload"].join(" ")}
         style={this.props.style}
         ref={this.preloadRef}

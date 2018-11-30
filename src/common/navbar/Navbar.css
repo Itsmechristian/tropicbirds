@@ -51,10 +51,11 @@ nav .container .right {
 
 .items {
     position: absolute;
-    width: 100%;
     background: rgba(10, 9, 9, 0.459);
+    transition: all .2s;
+    overflow: hidden;
+    width: 100%;
     left: 0;
-    height: 300px;
     top: 100%;
 }
 
@@ -65,8 +66,30 @@ nav .container .right {
 }
 
 .items ul li {
-    padding: 10px 0px;
+    padding: 20px 0px;
 }
+
+.hidden {
+    max-height: 0px;
+}
+
+.show {
+    max-height: 600px;
+    background: #000;
+}
+
+
+.web-menu ul {
+    margin: 8px 0px;
+    padding: 0;
+}
+
+.web-menu li {
+    list-style: none;
+    display: inline-block;
+    margin: 0px 10px;
+}
+
 
 @media (min-width: 576px) {
 

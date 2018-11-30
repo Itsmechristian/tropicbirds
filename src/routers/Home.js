@@ -6,15 +6,9 @@ import PreLoader from '../common/preload/PreLoader.js';
 class Home extends Component {
 
   render() {
-        let headerStyle = {
-          height: '500px',
-          width: '100%',
-          backgroundPosition: '50% 70%',
-        }
-
         return (
             <div className="home">
-              <PreLoader style={headerStyle} highQuality='https://res.cloudinary.com/sijey/image/upload/v1543433738/tropicbirds/pexels-photo-1599452.jpg' />
+              <PreLoader id="home-header" highQuality='https://res.cloudinary.com/sijey/image/upload/c_scale,fl_lossy/v1543433738/tropicbirds/pexels-photo-1599452.jpg' />
               {/* <section>
                 <div className="container">
                   <div className="left">

@@ -21,6 +21,13 @@ This style with transition every route
     font-family: 'SegoeUI-Light'
 }
 
+#home-header {
+    height: 500px;
+    width: 100%;
+    background-size: 800px;
+    background-position: 50% 70%;
+    transition: all ease .2s;
+}
 
 
 .home section {
@@ -68,7 +75,12 @@ This style with transition every route
 }
   
   @media (min-width: 768px) {
-  
+    #home-header {
+        height: 600px;
+        background-size: 1200px;
+        background-position: 70% 70%;
+    }
+    
   }
   
   @media (min-width: 992px) {
@@ -76,5 +88,9 @@ This style with transition every route
   }
   
   @media (min-width: 1200px) {
-
+    #home-header {
+        height: 800px;
+        background-size: 1920px;
+        background-position: center center;
+    }
   }

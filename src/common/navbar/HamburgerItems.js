@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export const HamburgerItems = () => {
+export const HamburgerItems = (props) => {
   return (
-    <div className="items">
+    <div className={['items', props.isClick ? 'show' : 'hidden'].join(" ")}>
       <ul>
         <li>
           <Link to="/">Home</Link>
