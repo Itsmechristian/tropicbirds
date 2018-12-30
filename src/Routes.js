@@ -17,7 +17,7 @@ class Routes extends Component {
             <Fragment>
                  <Navbar />
               {/* Once it detect location change CSS Transition Trigger to make route fade */}
-              <TransitionGroup>
+              <TransitionGroup className="body">
                 <CSSTransition
                   key={location.key}
                   classNames="fade"

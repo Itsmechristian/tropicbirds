@@ -10,7 +10,7 @@ class WebMenu extends Component {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/">Visit Us</Link>
+            <Link to="/visit-us">Visit Us</Link>
           </li>
           <li>
            <Link to="/">Services</Link>

@@ -11,7 +11,7 @@ class Navbar extends Component {
   constructor() {
     super();
 
-    
+
     this.state = {
         // By default get the window width onload
         windowWidth: window.innerWidth,
@@ -43,6 +43,7 @@ class Navbar extends Component {
     this.setState({
       isClick: isClick
     })
+
   }
 
   render() {
@@ -51,7 +52,7 @@ class Navbar extends Component {
         <div className="container" style={{backgroundColor: this.state.isClick ? '#000' : 'rgba(10, 9, 9, 0.459)', transition: 'all .2s'}}>
           <div className="left">
             <img
-              src="https://res.cloudinary.com/sijey/image/upload/fl_lossy/v1543422414/tropicbirds/icons.png"
+              src="https://res.cloudinary.com/sijey/image/upload/v1543422414/tropicbirds/icons.png"
               alt="icon"
               className="logo"
               height="40px"

@@ -3,6 +3,10 @@ import "./PreLoader.css";
 
 class PreLoader extends Component {
 
+  state = {
+    preloaderChildren: ''
+  }
+
   preloadRef = React.createRef();
   imgRef = React.createRef();
 
@@ -21,6 +25,8 @@ class PreLoader extends Component {
       currentRef.classList.add("loaded");
       // Removing ballJumping
       this.imgRef.current.remove();
+      // Adding children when image loads
+      this.setState({ preloaderChildren: this.props.children })
     };
   }
 
@@ -33,7 +39,7 @@ class PreLoader extends Component {
         ref={this.preloadRef}
       >
         <img src='https://res.cloudinary.com/sijey/image/upload/v1543422413/tropicbirds/ball-jumping.svg' alt="ball-jumping" ref={this.imgRef} />
-        {this.props.children}
+        {this.state.preloaderChildren}
       </div>
     );
   }

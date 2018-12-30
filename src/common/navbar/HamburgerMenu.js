@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-
-import { HamburgerItems } from "./HamburgerItems.js";
+import { Link } from "react-router-dom";
 
 class HamburgerMenu extends Component {
   constructor() {
@@ -15,12 +14,12 @@ class HamburgerMenu extends Component {
 
   handleOnClick() {
     this.setState({
-        isClick: this.state.isClick ? false : true
+      isClick: this.state.isClick ? false : true
     });
-    
+
     setTimeout(() => {
-        this.props.onClick(this.state.isClick)
-    })
+      this.props.onClick(this.state.isClick);
+    });
   }
 
   render() {
@@ -31,7 +30,24 @@ class HamburgerMenu extends Component {
           <span />
           <span />
         </div>
-        <HamburgerItems isClick={this.props.isClick}/>
+        <div className={["items", this.state.isClick ? "show" : "hidden"].join(" ")}>
+          <ul>
+            <li>
+              <Link to="/" onClick={this.handleOnClick}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/visit-us" onClick={this.handleOnClick}>Visit Us</Link>
+            </li>
+            <li>
+              <Link to="/" onClick={this.handleOnClick}>Services</Link>
+            </li>
+            <li>
+              <Link to="/" onClick={this.handleOnClick}>Contact</Link>
+            </li>
+          </ul>
+        </div>
       </div>
     );
   }

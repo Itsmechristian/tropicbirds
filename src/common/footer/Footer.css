@@ -1,0 +1,75 @@
+.footer {
+  height: auto;
+  background: #333;
+}
+
+.footer h1 {
+  color: #fff;
+}
+
+.footer .container {
+  padding: 2rem 15px;
+}
+
+.footer form input {
+  height: 35px;
+  width: 90%;
+  margin: 10px 0px;
+  border: none;
+  padding: 0 5px;
+  font-family: "Segoe-UI";
+  color: #fff;
+  background: #464646;
+}
+
+.footer form textarea {
+  width: 90%;
+  border: none;
+  padding: 5px;
+  background: #464646;
+  color: #fff;
+  font-family: Segoe-UI;
+  resize: none;
+  margin: 5px 0px;
+}
+
+.footer form button {
+    display: block;
+    height: 30px;
+    width: 150px;
+    margin: 15px 0px;
+    background: #FFCB02;
+    color: #fff;
+    border: none;
+}
+
+@media (min-width: 576px) {
+  .footer form input {
+    width: 90%;
+  }
+  .footer form textarea {
+    width: 90%;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer form input {
+    width: 80%;
+  }
+  .footer form textarea {
+    width: 80%;
+  }
+}
+
+@media (min-width: 992px) {
+  .footer form input {
+    width: 50%;
+  }
+  .footer form textarea {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+
+}

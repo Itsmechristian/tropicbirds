@@ -1,96 +1,20 @@
-
-/* 
+/*
 This style with transition every route
 */
 .fade-enter {
-    opacity: 0;
-    z-index: 1;
-  }
-  
+  opacity: 0;
+  z-index: 1;
+}
+
 .fade-enter.fade-enter-active {
-    opacity: 1;
-    transition: opacity 250ms linear;
-}
-
-.title {
-    font-size: 3rem;
-}
-
-.subtitle {
-    font-size: 1.5rem;
-    font-family: 'SegoeUI-Light'
-}
-
-#home-header {
-    height: 500px;
-    width: 100%;
-    background-size: 800px;
-    background-position: 50% 70%;
-    transition: all ease .2s;
+  opacity: 1;
+  transition: opacity 250ms linear;
 }
 
 
-.home section {
-    height: 500px;
+.App {
+    display: grid;
+    grid-template-areas:
+    "nav"
+    "content"
 }
-
-.home section .container {
-    padding: 5rem;
-    margin: 5rem auto;
-}
-
-.home section .container .left {
-    display: inline-block;
-    width: 50%;
-    padding: 0 1rem 0 0;
-    vertical-align: middle;
-}
-
-.home section .container .right {
-    display: inline-block;
-    width: 40%;
-    vertical-align: top;
-    padding: 0 1rem;
-    position: relative;
-}
-
-.home section .container .right img:first-child {
-    height: 220px;
-    width: auto;
-    position: absolute;
-    top: -50px;
-    z-index: 2;
-}
-
-.home section .container .right img:last-child {
-    height: 250px;
-    width: 375px;
-    position: absolute;
-    z-index: 1;
-    right: 0;
-}
-
-@media (min-width: 576px) {
- 
-}
-  
-  @media (min-width: 768px) {
-    #home-header {
-        height: 600px;
-        background-size: 1200px;
-        background-position: 70% 70%;
-    }
-    
-  }
-  
-  @media (min-width: 992px) {
-
-  }
-  
-  @media (min-width: 1200px) {
-    #home-header {
-        height: 800px;
-        background-size: 1920px;
-        background-position: center center;
-    }
-  }
