@@ -24,3 +24,4 @@ yarn-error.log*
 
 
 #lambda build
+/lambda
