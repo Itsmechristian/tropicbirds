@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "cloudinary-react": "^1.1.0",
     "global": "^4.3.2",
     "netlify-lambda": "^1.1.1",
     "react": "^16.6.3",
