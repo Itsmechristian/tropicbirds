@@ -21,8 +21,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "netlify-build": "netlify-lambda build functions",
-    "prod": "concurrently \"yarn build\" \"yarn netlify-build\""
+    "netlify-build": "netlify-lambda build functions"
   },
   "eslintConfig": {
     "extends": "react-app"
